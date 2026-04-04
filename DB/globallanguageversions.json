@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "69ca6e211b9229f915d3e340"
+  },
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "changes": [],
+  "createdAt": {
+    "$date": "2026-03-30T12:35:45.540Z"
+  },
+  "updatedAt": {
+    "$date": "2026-03-30T12:35:45.540Z"
+  }
+}]
