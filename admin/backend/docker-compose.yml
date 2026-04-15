@@ -1,6 +1,6 @@
 services:
-  fzsocialbackend:
-    container_name: fzsocialnetworkBE
+  socialbackend:
+    container_name: socialnetworkBE
     build: ./
     restart: always
     ports:
@@ -8,25 +8,25 @@ services:
     networks:
       - frazileserver
     depends_on:
-      - fzsocialDB
+      - socialDB
 
-fzsocialDB:
-  container_name: fzsocialnetworkDB
+socialDB:
+  container_name: socialnetworkDB
   image: mongo
   restart: always
   environment:
     MONGO_INITDB_ROOT_USERNAME: fzsocial
-    MONGO_INITDB_ROOT_PASSWORD: Xtua6G#hYI@k39NFMVWcqwy5d8Px*P
-    MONGO_INITDB_DATABASE: fzsocialnetworkDB
+    MONGO_INITDB_ROOT_PASSWORD: "Y7!qP3mZ9PvL2Xr5#Tn8Kc4WfH1sD6B0u"
+    MONGO_INITDB_DATABASE: socialnetworkDB
   volumes:
-    - fzsocialDB:/data/db
+    - socialdatabase:/data/db
   ports:
-    - 5036:27017
+    - 5034:27017
   networks:
     - frazileserver
 
 volumes:
-  fzsocialDB:
+  socialdatabase:
 
 networks:
   frazileserver:
