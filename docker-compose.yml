@@ -17,7 +17,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: fzsocial
       MONGO_INITDB_ROOT_PASSWORD: "Y7!qP3mZ9PvL2Xr5#Tn8Kc4WfH1sD6B0u"
-      # MONGO_INITDB_DATABASE: fzsocialnetworkDB
+      MONGO_INITDB_DATABASE: fzsocialnetworkDB
     volumes:
       - fzsocialdatabase:/data/db
     ports:
