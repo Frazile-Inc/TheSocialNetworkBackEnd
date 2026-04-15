@@ -1,19 +1,17 @@
 FROM node:18-alpine
 
+# Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json (if available)
+# Install dependencies first (better caching)
 COPY package*.json ./
+RUN npm ci --only=production
 
-# Install dependencies
-RUN npm install
-
-# Copy all the backend files
+# Copy application source
 COPY . .
 
-# Expose the API port
-EXPOSE 5000
+# Expose app port
+EXPOSE 5035
 
-# Start development server or production server
-# Note: In production you would typically use "node index.js"
+# Run the application
 CMD ["node", "index.js"]
