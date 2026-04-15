@@ -16,7 +16,7 @@ fzsocialDB:
   restart: always
   environment:
     MONGO_INITDB_ROOT_USERNAME: fzsocial
-    MONGO_INITDB_ROOT_PASSWORD: "Xtua6G#hYI@k39NFMVWcqwy5d8Px*P"
+    MONGO_INITDB_ROOT_PASSWORD: Xtua6G#hYI@k39NFMVWcqwy5d8Px*P
     MONGO_INITDB_DATABASE: fzsocialnetworkDB
   volumes:
     - fzsocialDB:/data/db
