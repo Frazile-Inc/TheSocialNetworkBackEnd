@@ -17,16 +17,16 @@ socialDB:
   environment:
     MONGO_INITDB_ROOT_USERNAME: fzsocial
     MONGO_INITDB_ROOT_PASSWORD: "Xtua6G#hYI@k39NFMVWcqwy5d8Px*P"
-    MONGO_INITDB_DATABASE: socialnetworkDB
+    MONGO_INITDB_DATABASE: fzsocialnetworkDB
   volumes:
-    - socialdatabase:/data/db
+    - fzsocialDB:/data/db
   ports:
     - 5036:27017
   networks:
     - frazileserver
 
 volumes:
-  socialdatabase:
+  fzsocialDB:
 
 networks:
   frazileserver:
