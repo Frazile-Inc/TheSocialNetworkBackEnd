@@ -1,6 +1,6 @@
 services:
-  socialbackend:
-    container_name: socialnetworkBE
+  fzsocialbackend:
+    container_name: fzsocialnetworkBE
     build: ./
     restart: always
     ports:
@@ -8,10 +8,10 @@ services:
     networks:
       - frazileserver
     depends_on:
-      - socialDB
+      - fzsocialDB
 
-socialDB:
-  container_name: socialnetworkDB
+fzsocialDB:
+  container_name: fzsocialnetworkDB
   image: mongo
   restart: always
   environment:
